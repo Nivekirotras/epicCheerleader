@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     languages: {
       'en-US': `${process.env.NEXT_PUBLIC_SITE_URL}`,
     },
-  }
+  },
+  /* Verification by google search console */
+  verification: {
+    google: "QeWyBhtuwYXZhhQQ5BdQmp0_fLOQENvm-hF9Is_IUGE"
+  },
 };
 
 export default function RootLayout({
