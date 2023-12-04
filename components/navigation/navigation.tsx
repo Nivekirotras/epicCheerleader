@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import PaddingContainer from '../layout/padding-container'
+import Image from 'next/image';
 
 const Navigation = () => {
     return (
@@ -8,7 +9,11 @@ const Navigation = () => {
         <div className='border-b sticky top-0 right-0 left-0 bg-white bg-opacity-50 backdrop-blur-md z-[999]'>
              <PaddingContainer>
                 <div className='py-6 flex item-center justify-between'>
-                    <Link className='text-2xl font-bold' href="/">Epic Cheerleader</Link>
+                    <Link href="/">
+                        <div className="logo">
+                            <Image src="/epicCheerleaderLogo.png" alt="Epic Cheerleader Logo" width={225} height={50} />
+                        </div>
+                    </Link>
                     {/* Category Link */}
                     <nav>
                         <ul className='flex items-center gap-4 text-neutral-600'>
