@@ -4,8 +4,72 @@ import SocialLink from "@/components/elements/social-links";
 import PaddingContainer from "@/components/layout/padding-container";
 import PostBody from "@/components/post/post-body";
 import PostHero from "@/components/post/post-hero";
+import siteConfig from "@/config/site";
 import directus_old from "@/lib/directus_old";
 import { notFound } from "next/navigation";
+import { cache } from "react";
+
+const getPostData = async (postSlug: string) => {
+    try {
+        const post = await directus_old.items("post").readByQuery({
+            filter: {
+                slug: {
+                    _eq: postSlug,
+                }
+            },
+            fields: [
+                "*",
+                "category.id",
+                "category.title",
+                "author.id",
+                "author.first_name",
+                "author.last_name",
+            ],
+        });
+        return post?.data?.[0];
+    } catch (error) {
+        console.log(error);
+        throw new Error("Error fetching post in post page");
+    }
+};
+
+// Generate Metadata function
+export const generateMetadata = async ({
+    params: {slug},
+}: {
+    params: {
+        slug: string;
+    };
+}) => {
+    // Get post data
+    const post = await getPostData(slug);
+
+    return {
+        title: post?.title,
+        description: post?.description,
+        openGraph: {
+            title: post?.title,
+            description: post?.description,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${slug}`,
+            siteName: post?.title,
+            images: [
+              {
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${slug}/opengraph-image`,
+                width: 1200,
+                height: 630,
+              },
+            ],
+            locale: 'en_US',
+            type: 'website',
+          },
+          alternates: {
+            canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${slug}`,
+            languages: {
+              'en-US': `${process.env.NEXT_PUBLIC_SITE_URL}/post/${slug}`,
+            },
+          }
+    };
+};
 
 export const generateStaticParams = async () => {
     /* For DUMMY DATA
@@ -46,31 +110,28 @@ const Page = async ({
 }) => {
     /* const post = DUMMY_POSTS.find((post) => post.slug === params.slug); */
 
-    const getPostData = async () => {
-        try {
-            const post = await directus_old.items("post").readByQuery({
-                filter: {
-                    slug: {
-                        _eq: params.slug,
-                    }
-                },
-                fields: [
-                    "*",
-                    "category.id",
-                    "category.title",
-                    "author.id",
-                    "author.first_name",
-                    "author.last_name",
-                ],
-            });
-            return post?.data?.[0];
-        } catch (error) {
-            console.log(error);
-            throw new Error("Error fetching post in post page");
-        }
-    };
+    const postSlug = params.slug;
+    const post = await getPostData(postSlug);
+    //console.log(post);
 
-    const post = await getPostData();
+    /* Structured Data for Google */
+    const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${postSlug}/opengraph-image`,
+    //image: `${process.env.NEXT_PUBLIC_ASSETS_URL}${post.image}`,
+    author: post.author.first_name + " " + post.author.last_name,
+    genre: post.category.title,
+    // keywords: "Psychology mental health self-confidence"
+    publisher: siteConfig.siteName,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${postSlug}`,
+    datePublished: new Date(post.date_created).toISOString(),
+    dateCreated: new Date(post.date_created).toISOString(),
+    dateModified: new Date(post.date_updated).toISOString(),
+    description: post.description,
+    articleBody: post.body,
+    };
 
     /** If slug is modified or not found it shows a 404 */
     if (!post) {
@@ -79,6 +140,11 @@ const Page = async ({
     
     return (
         <PaddingContainer>
+            {/** Add JSON-LD to the page */}
+            <script 
+                type="application/ld+jason"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd)}}
+            />
             {/** Container */}
             <div className="space-y-10">
             <PostHero post={post} />

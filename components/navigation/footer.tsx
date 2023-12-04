@@ -36,7 +36,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="text-sm text-neutral-400">Currently at</div>
-                        <div className="flex items-center gap-2 px-3 px-2 bg-white rounded-md shadow-md">
+                        <div className="flex items-center gap-2 px-3 bg-white rounded-md shadow-md">
                             <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
                             {siteConfig.currentlyAt}
                         </div>
