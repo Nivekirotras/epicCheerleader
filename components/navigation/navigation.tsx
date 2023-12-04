@@ -18,6 +18,9 @@ const Navigation = () => {
                             <li>
                                 <Link href="/experiences">Experiences</Link>
                             </li>
+                            <li>
+                                <Link href="/research">Research</Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
