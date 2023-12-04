@@ -55,7 +55,7 @@ export const generateMetadata = async ({
             siteName: categoryData?.title,
             images: [
               {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/${category}}/opengraph-image`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/${category}}/opengraph-image.png`,
                 width: 1200,
                 height: 629,
               },

@@ -54,7 +54,7 @@ export const generateMetadata = async ({
             siteName: post?.title,
             images: [
               {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${slug}/opengraph-image`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/post/${slug}/opengraph-image.png`,
                 width: 1200,
                 height: 630,
               },
