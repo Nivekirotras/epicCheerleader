@@ -18,7 +18,7 @@ const Navigation = () => {
                     <nav>
                         <ul className='flex items-center gap-4 text-neutral-600'>
                             <li>
-                                <Link href="/How-tos">How-tos</Link>
+                                <Link href="/how-tos">How-tos</Link>
                             </li>
                             <li>
                                 <Link href="/experiences">Experiences</Link>
