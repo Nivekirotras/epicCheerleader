@@ -32,7 +32,7 @@ const CTACard = async () => {
   return (
     <div className='relative px-6 py-10 rounded-md bg-slate-100'>
         {/* Overlay */}
-        <div className='absolute z-10 inset-0 bg-gradient-to-br from-white/95 via-white/70 to-white/30'></div>
+        <div className='absolute z-10 inset-0 bg-gradient-to-br from-white/80 via-white/50 to-white/30'></div>
         {/* Image */}
         <Image
             fill 
