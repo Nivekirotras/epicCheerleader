@@ -1,4 +1,5 @@
 import {Instagram, Twitter, Linkedin, Facebook} from "lucide-react";
+import { FaPinterest } from "react-icons/fa";
 import Link from 'next/link';
 import React from 'react';
 
@@ -21,6 +22,8 @@ const SocialLink = ({
                     return <Linkedin size="20"/>;
                 case "facebook":
                     return <Facebook size="20"/>;
+                case "pinterest":
+                    return <FaPinterest size="20"/>;
         };
     };
   return (

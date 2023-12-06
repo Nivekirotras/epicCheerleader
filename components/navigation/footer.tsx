@@ -21,16 +21,16 @@ const Footer = () => {
                             link={siteConfig.socialLinks.twitter}
                             />
                             <SocialLink 
-                            platform="linkedin"
-                            link={siteConfig.socialLinks.linkedin}
-                            />
-                            <SocialLink 
                             platform="instagram"
                             link={siteConfig.socialLinks.instagram}
                             />
                             <SocialLink
                             platform="facebook"
                             link={siteConfig.socialLinks.facebook}
+                            />
+                            <SocialLink
+                            platform="pinterest"
+                            link={siteConfig.socialLinks.pinterest}
                             />
                         </div>
                     </div>

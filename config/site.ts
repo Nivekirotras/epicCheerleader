@@ -8,6 +8,7 @@ export interface SiteConfig {
         instagram: string;
         linkedin: string;
         facebook:string;
+        pinterest: string;
     };
 }
 
@@ -16,10 +17,11 @@ const siteConfig: SiteConfig = {
     description: "Your personal cheerleader and the best way to cheer you up",
     currentlyAt: "Zurich",
     socialLinks: {
-        twitter: "https://twitter.com",
-        instagram: "https://instagram.com",
+        twitter: "https://twitter.com/epiccheerlead",
+        instagram: "https://www.instagram.com/epiccheerleader_/",
         linkedin: "https://linkedin.com",
         facebook: "https://facebook.com",
+        pinterest: "https://www.pinterest.ch/epic_cheerleader/",
     },
 };
 
