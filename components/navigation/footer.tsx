@@ -47,7 +47,7 @@ const Footer = () => {
                     <div className="text-sm text-neutral-400">
                         All rights reserved | Copyright {new Date().getFullYear()}
                     </div>
-                    <div className="text-sm">Made with love by nivek</div>
+                    <div className="text-sm">Built in the 🏔️ with lots of ☕</div>
                 </div>
             </PaddingContainer>
         </div>
