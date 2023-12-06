@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SocialLink from "../elements/social-links";
 import PaddingContainer from "../layout/padding-container";
 import siteConfig from "@/config/site";
@@ -8,13 +9,13 @@ const Footer = () => {
         <div className="py-6 mt-10 border-t">
             <PaddingContainer>
                 <div>
-                    <h2 className="text-3xl font-bold">{siteConfig.siteName}</h2>
-                    <p className="max-w-md mt-2 neutral-700 text-lg">{siteConfig.description}</p>
+                    <Image src="/epicCheerleaderLogo.png" alt="Epic Cheerleader Logo" width={225} height={50} />
+                    <p className="max-w-md mt-2 neutral-500 text-lg">{siteConfig.description}</p>
                 </div>
                 {/* Social and Currently at Section */}
                 <div className="flex flex-wrap justify-between gap-4 mt-6">
                     <div>
-                        <div className="text-lg font-medium">#becomeYourCheerleader</div>
+                        <div className="text-lg neutral-500 font-medium">#becomeYourCheerleader</div>
                         <div className="flex items-center gap-3 t mt-2 ext-neutral-600">
                             <SocialLink 
                             platform="twitter"

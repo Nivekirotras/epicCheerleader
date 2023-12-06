@@ -137,7 +137,7 @@ const Page = async ({
     return (
         <PaddingContainer>
             <div className="mb-10">
-                <h1 className="text-4xl font-semibold">{typeCorrectedCategory?.title}</h1>
+                <h1 className="text-4xl font-semibold mb-4">{typeCorrectedCategory?.title}</h1>
                 <p className="text-lg text-neutral-600">{typeCorrectedCategory?.description}</p>
             </div>
             <PostList posts={typeCorrectedCategory.posts} />    

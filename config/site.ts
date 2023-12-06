@@ -13,8 +13,8 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-    siteName: "EpicCheerleader",
-    description: "Your personal cheerleader and the best way to cheer you up",
+    siteName: "Epic Cheerleader",
+    description: "Superpower your personal growth journey and become your ultimate inner cheerleader.",
     currentlyAt: "Zurich",
     socialLinks: {
         twitter: "https://twitter.com/epiccheerlead",

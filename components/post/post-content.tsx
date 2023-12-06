@@ -12,7 +12,7 @@ interface PostContentProps {
 
 const PostContent = ({post, isPostPage = false}: PostContentProps) => {
   return (
-    <div className='space-y-2'>
+    <div className='space-y-2 pb-50'> {/**Added padding below */}
       {/* Tags */}
       <div className={`flex gap-2 flex-wrap items-center text-neutral-400 ${
         isPostPage ? "text-sm" : "text-xs @md:text-sm"
@@ -20,9 +20,11 @@ const PostContent = ({post, isPostPage = false}: PostContentProps) => {
         <div 
             /* Define colors based on what category it is */
             className={`font-medium ${
-                post.category.title === "Cities"
-                    ? "text-emerald-600"
-                    : "text-indigo-600"
+              post.category.title === "Knowledge"
+              ? "text-emerald-600"
+              : post.category.title === "Experiences"
+              ? "text-indigo-600"
+              : "text-red-600"           
                   }`}
                   >
                     {post.category.title}

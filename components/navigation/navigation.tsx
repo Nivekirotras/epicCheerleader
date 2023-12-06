@@ -24,7 +24,7 @@ const Navigation = () => {
                                 <Link href="/experiences">Experiences</Link>
                             </li>
                             <li>
-                                <Link href="/research">Research</Link>
+                                <Link href="/knowledge">Knowledge</Link>
                             </li>
                         </ul>
                     </nav>
