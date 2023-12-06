@@ -12,9 +12,9 @@ interface PostContentProps {
 
 const PostContent = ({post, isPostPage = false}: PostContentProps) => {
   return (
-    <div className='space-y-2 sm:my-20'>
+    <div className='pt-2'>
       {/* Tags */}
-      <div className={`flex gap-2 flex-wrap items-center text-neutral-400 ${
+      <div className={`flex gap-2 flex-wrap items-center text-neutral-400 my-2 ${
         isPostPage ? "text-sm" : "text-xs @md:text-sm"
         }`}>
         <div 
@@ -30,7 +30,7 @@ const PostContent = ({post, isPostPage = false}: PostContentProps) => {
                   {post.category.title}
         </div>
         <div className='w-1 h-1 rounded-full bg-neutral-200'></div>
-        <div>{`${post.author.first_name} ${post.author.last_name}`}</div>
+        <div className=''>{`${post.author.first_name} ${post.author.last_name}`}</div>
         <div className='w-1 h-1 rounded-full bg-neutral-200'></div>
         <div>{getReadingTime(post.body)}</div>        
         <div className='w-1 h-1 rounded-full bg-neutral-200'></div>
@@ -40,17 +40,17 @@ const PostContent = ({post, isPostPage = false}: PostContentProps) => {
       <h2 className={`${
           isPostPage 
               ? "text-2xl md:text-3xl lg:text-4xl font-bold"
-              : "@lg:text-3xl text-xl @md:text-2xl font-medium"
+              : "@lg:text-3xl text-2xl @md:text-2xl font-semibold"
           }`}
         >
           {post.title}
       </h2> 
       {/* Description */}
-      <p className='text-base @lg:text-lg leading-snug text-neutral-600'>{post.description}</p>
+      <p className='text-base @lg:text-lg leading-snug text-neutral-600 pt-3'>{post.description}</p>
       {/* Read More - make it disappear if it is a Post Page*/}
       {!isPostPage && (
-      <div className='flex items-center gap-2 pt-3'>
-          <p>Read Mmore</p>
+      <div className='flex font-semibold items-center gap-2 pt-3'>
+          <p>Read More</p>
           <ArrowRight size="14" />
       </div>
       )}

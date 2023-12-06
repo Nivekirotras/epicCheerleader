@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="py-6 mt-10 border-t">
             <PaddingContainer>
                 <div>
-                    <Image src="/epicCheerleaderLogo.png" alt="Epic Cheerleader Logo" width={225} height={50} />
+                    <Image src="/epicCheerleaderLogo.png" alt="Epic Cheerleader Logo" width={180} height={50} />
                     <p className="max-w-md mt-2 neutral-500 text-lg">{siteConfig.description}</p>
                 </div>
                 {/* Social and Currently at Section */}

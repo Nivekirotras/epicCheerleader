@@ -8,7 +8,7 @@ interface PostListProps {
 
 const PostList = ({ posts, layout = "vertical" }: PostListProps) => {
   // Set grid classes based on the number of posts
-  let gridClasses = 'grid grid-cols-1 gap-10 auto-rows-min my-10';
+  let gridClasses = 'grid grid-cols-1 gap-10 auto-rows-max';
 
   if (posts.length >= 4) {
     gridClasses += ' md:grid-cols-2 lg:grid-cols-3'; // 3 columns on large screens, 2 on medium
