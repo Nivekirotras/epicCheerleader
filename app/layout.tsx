@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.siteName,
     images: [
       {
-        url: 'http://localhost:3009/opengraph-image.png',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/opengraph-image.png`,
         width: 1200,
         height: 628,
       },
