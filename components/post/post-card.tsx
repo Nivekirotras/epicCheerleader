@@ -16,7 +16,7 @@ const PostCard = ({post, layout = "horizontal", reverse = false}: PostProps) => 
         className={` @container ${
             layout === "horizontal"
                 ? "grid items-center grid-cols-1 md:grid-cols-2 gap-10"
-                : "space-y-10 pb-10" //changed this from mb-10
+                : "space-y-8 pb-10" //changed this from mb-10
         }`}
         href={`/post/${post.slug}`}
     >

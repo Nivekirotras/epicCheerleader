@@ -12,7 +12,7 @@ interface PostContentProps {
 
 const PostContent = ({post, isPostPage = false}: PostContentProps) => {
   return (
-    <div className='space-y-2 pb-50'> {/**Added padding below */}
+    <div className='space-y-2 lg:pb-10'>
       {/* Tags */}
       <div className={`flex gap-2 flex-wrap items-center text-neutral-400 ${
         isPostPage ? "text-sm" : "text-xs @md:text-sm"
