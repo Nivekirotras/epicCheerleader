@@ -3,6 +3,8 @@ import CTACard from '@/components/elements/cta-card';
 import PaddingContainer from '@/components/layout/padding-container';
 import PostCard from '@/components/post/post-card';
 import PostList from '@/components/post/post-lists';
+import PostCard1 from '@/components/sections/hero-section';
+import HeroSection from '@/components/sections/hero-section';
 import directus_old from '@/lib/directus_old';
 //import directus from '@/lib/directus';
 //import { readItems } from '@directus/sdk';
@@ -44,6 +46,8 @@ export default async function Home() {
   return (
     <PaddingContainer>
       <main className='space-y-10'>
+        
+        <HeroSection /> 
         <PostCard post={posts[0]} />
         <PostList 
           posts={posts.filter((_post, index) => index >0 && index < 3)} 

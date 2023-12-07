@@ -48,16 +48,18 @@ export default async function og({
         {/* Background */}
         <div tw="absolute flex inset-0">
           <img
-            tw="flex flex-1 object-cover w-full h-full object-center"
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1121&q=80"
+            tw="flex flex-1 object-cover w-full object-center"
+            src="https://images.unsplash.com/photo-1543357480-c60d40007a3f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Explorer"
           />
           {/* Overlay */}
           <div
             tw={`absolute flex inset-0 bg-opacity-80 ${
-              categoryData?.title === "Cities"
-                ? "bg-emerald-600"
-                : "bg-indigo-600"
+              categoryData?.title === "Knowledge"
+              ? "bg-emerald-600"
+              : categoryData?.title === "Experiences"
+              ? "bg-indigo-600"
+              : "bg-red-500"  
             }`}
           />
         </div>
