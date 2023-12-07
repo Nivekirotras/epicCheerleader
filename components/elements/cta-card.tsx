@@ -38,7 +38,7 @@ const CTACard = async () => {
             fill 
             alt="CTA Card Image"
             className="object-cover object-center"
-            src="https://images.unsplash.com/photo-1676676701395-5fd57415a91a?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+            src="https://images.unsplash.com/photo-1637825891035-1930cbd564dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
         
         {/* Content Container */}
         <div className='relative z-20'>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 interface SectionTitles {
   title: string;
@@ -13,10 +14,11 @@ const SectionTitle = ({ title, url }: SectionTitles) => {
         {title}
       </h2>
       <div className="flex-grow border-t-2 border-purple-700 mx-8"></div> {/* This creates the line */}
-      <Link href={url}>
-        <p className="text-lg text-decoration-line: underline text-purple-700 hover:text-purple-600">
+      <Link className="flex flex-row items-center" href={url}>
+        <p className="text-md text-decoration-line: underline text-purple-700 hover:text-purple-600">
           See more articles
         </p>
+        <ArrowRight size="14" />
       </Link>
     </div>
   );

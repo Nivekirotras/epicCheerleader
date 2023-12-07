@@ -1,6 +1,6 @@
 import CTACard from "@/components/elements/cta-card";
 import PaddingContainer from "@/components/layout/padding-container";
-import AboutSection from "@/components/sections/about-seection";
+import AboutSection from "@/components/sections/about-section";
 import { cache } from "react";
 
 /*

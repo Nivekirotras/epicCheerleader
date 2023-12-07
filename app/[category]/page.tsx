@@ -1,4 +1,5 @@
 import { DUMMY_CATEGORIES, DUMMY_POSTS } from "@/DUMMY_DATA"
+import CTACard from "@/components/elements/cta-card";
 import PaddingContainer from "@/components/layout/padding-container";
 import PostList from "@/components/post/post-lists";
 import siteConfig from "@/config/site";
@@ -6,6 +7,7 @@ import directus_old from "@/lib/directus_old";
 import { Post } from "@/types/collections";
 import { notFound } from "next/navigation";
 import { cache } from "react";
+
 
 // Get category data
 const getCategoryData = async (categorySlug: string) => {
@@ -140,7 +142,10 @@ const Page = async ({
                 <h1 className="text-4xl font-semibold mb-4">{typeCorrectedCategory?.title}</h1>
                 <p className="text-lg text-neutral-600">{typeCorrectedCategory?.description}</p>
             </div>
-            <PostList posts={typeCorrectedCategory.posts} />    
+            <PostList posts={typeCorrectedCategory.posts} />
+            <div className="mt-10">
+                <CTACard/>
+            </div>
         </PaddingContainer>
     );
 };  

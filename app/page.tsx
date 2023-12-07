@@ -47,7 +47,7 @@ export default async function Home() {
       <main className='space-y-10'>
         
         <HeroSection /> 
-        <SectionTitle title={"Latest Articles"} url={"https://www.epiccheerleader.com/how-tos"}/>
+        <SectionTitle title={"Featured Articles"} url={"https://www.epiccheerleader.com/how-tos"}/>
         <PostCard post={posts[0]} />
         <PostList 
           posts={posts.filter((_post, index) => index >0 && index < 3)} 

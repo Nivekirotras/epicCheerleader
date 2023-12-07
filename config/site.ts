@@ -20,7 +20,7 @@ const siteConfig: SiteConfig = {
         twitter: "https://twitter.com/epiccheerlead",
         instagram: "https://www.instagram.com/epiccheerleader_/",
         linkedin: "https://linkedin.com",
-        facebook: "https://facebook.com",
+        facebook: "https://www.facebook.com/epiccheerlead/",
         pinterest: "https://www.pinterest.ch/epic_cheerleader/",
     },
 };

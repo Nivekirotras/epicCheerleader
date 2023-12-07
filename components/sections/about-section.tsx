@@ -8,7 +8,7 @@ const AboutSection = () => {
   
           <div className="">
               <h2 className="mb-8 text-2xl md:text-3xl font-bold text-purple-700">Our Manifesto</h2>
-              <h1 className="mb-8 text-4xl md:text-5xl lg:text-6xl font-bold">The Art ot Cheering for Ourselves"</h1>
+              <h1 className="mb-8 text-4xl md:text-5xl lg:text-6xl font-bold">"The Art ot Cheering for Ourselves"</h1>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">In a world where it’s second nature to champion others, where we effortlessly uplift friends, family, and even strangers, we often overlook the most crucial person in our lives—ourselves. We've mastered the art of being there for everyone else, but when it comes to our own needs, our voices of support often fall silent.</p>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">At the core of our existence, the most potent force we have is the power of self-empowerment, encouragement, and celebration. Yet, curiously, we've habitually outsourced this power. We've handed over our cheerleading pom-poms to others, forgetting that the person in the mirror needs them the most.</p>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Imagine transforming the daily mirror encounter into a moment of profound self-upliftment. A moment where we don't just see our reflection, but we connect with our deepest intentions, cheer on our aspirations, and affirm our worth.</p>
@@ -16,7 +16,7 @@ const AboutSection = () => {
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Remember, you can't discover your true passion and potential by merely thinking about it. It requires action, an inward journey of self-discovery. It's time to be your own cheerleader, to ignite the spark of self-belief, and to witness how this transforms every facet of your life.</p>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Join us in this movement. With this site we want to increase the awareness on this topic and give you the tools to embrace the power of cheering for yourself. It's not just about feeling good; it's about unleashing your full potential. Here, we don't just dream about a life filled with self-confidence and self-celebration; we create it, one cheer at a time. </p>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Sincerely</p>
-              <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Kevin</p>
+              <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Nivek Iro</p>
               <div className="flex flex-wrap gap-y-2">
 
               </div>
