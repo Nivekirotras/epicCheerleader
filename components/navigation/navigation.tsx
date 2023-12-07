@@ -5,15 +5,13 @@ import React from 'react'
 import { Fragment } from 'react';
 import PaddingContainer from '../layout/padding-container';
 import Image from 'next/image';
-import {AiOutlineMenu} from "react-icons/ai";
-import { useState } from 'react';
 import {Popover, Transition} from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 
 const Navigation = () => {
     return (
-        <Popover>
         <div className='border-b sticky top-0 right-0 left-0 bg-white bg-opacity-50 backdrop-blur-md z-[999]'>
+             <Popover>
              <PaddingContainer>
                 <div className='py-6 flex item-center justify-between'>
                     <Link href="/">
@@ -32,6 +30,9 @@ const Navigation = () => {
                             </li>
                             <li>
                                 <Link href="/knowledge">Knowledge</Link>
+                            </li>
+                            <li>
+                                <Link href="/about">About</Link>
                             </li>
                         </ul>
                     </nav>
@@ -77,6 +78,9 @@ const Navigation = () => {
                                                     <li>
                                                         <Link href="/knowledge">Knowledge</Link>
                                                     </li>
+                                                    <li>
+                                                        <Link href="/about">About</Link>
+                                                    </li>
                                                 </ul>
                                             </nav> 
                                         </div>
@@ -89,8 +93,8 @@ const Navigation = () => {
                     
                 </div>
             </PaddingContainer>
+            </Popover>
         </div>
-        </Popover>
     );
 };
 
