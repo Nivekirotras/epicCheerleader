@@ -1,10 +1,9 @@
-import { DUMMY_POSTS } from '@/DUMMY_DATA';
 import CTACard from '@/components/elements/cta-card';
 import PaddingContainer from '@/components/layout/padding-container';
 import PostCard from '@/components/post/post-card';
 import PostList from '@/components/post/post-lists';
-import PostCard1 from '@/components/sections/hero-section';
 import HeroSection from '@/components/sections/hero-section';
+import SectionTitle from '@/components/sections/section-titles';
 import directus_old from '@/lib/directus_old';
 //import directus from '@/lib/directus';
 //import { readItems } from '@directus/sdk';
@@ -48,13 +47,16 @@ export default async function Home() {
       <main className='space-y-10'>
         
         <HeroSection /> 
+        <SectionTitle title={"Latest Articles"} url={"https://www.epiccheerleader.com/how-tos"}/>
         <PostCard post={posts[0]} />
         <PostList 
           posts={posts.filter((_post, index) => index >0 && index < 3)} 
           />
         {/* @ts-expected-error Async Component*/}
         <CTACard />
+        <SectionTitle title={"Editor's choice"} url={"https://www.epiccheerleader.com/experiences"}/>
         <PostCard reverse post={posts[3]} />
+        <SectionTitle title={"Favorite Articles"} url={"https://www.epiccheerleader.com/knowledge"}/>
         <PostList 
           posts={posts.filter((_post, index) => index >3 && index < 7)} 
           />
