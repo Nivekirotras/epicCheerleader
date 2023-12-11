@@ -62,7 +62,7 @@ const CTACard = async () => {
 
             {/** Subscribers */}
             <div className='mt-5 text-neutral-700'>
-              Join our <span className='px-2 py-1 text-sm rounded-md bg-neutral-700 text-neutral-100'>{5+ subscribersCount}</span>
+              Join our <span className='px-2 py-1 text-sm rounded-md bg-neutral-700 text-neutral-100'>500+</span>
               {" "}subscribers now!              
               </div>
         </div>
@@ -72,3 +72,8 @@ const CTACard = async () => {
 }
 
 export default CTACard;
+
+// <div className='mt-5 text-neutral-700'>
+// Join our <span className='px-2 py-1 text-sm rounded-md bg-neutral-700 text-neutral-100'>{5+ subscribersCount}</span>
+// {" "}subscribers now!              
+// </div>
