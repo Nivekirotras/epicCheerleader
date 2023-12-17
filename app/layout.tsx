@@ -6,6 +6,7 @@ import Navigation from '@/components/navigation/navigation'
 import Footer from '@/components/navigation/footer'
 import siteConfig from '@/config/site'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -62,6 +63,7 @@ export default function RootLayout({
         {/** the calculations make sure that the footer does not overlap (original is -300px) */}
         <div className='pt-10 min-h-[calc(100vh-100px)]'>{children}</div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
