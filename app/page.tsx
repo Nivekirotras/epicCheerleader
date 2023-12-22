@@ -51,7 +51,7 @@ export default async function Home() {
         <PostCard post={posts[5]} />
         <PostList 
           // posts={posts.filter((_post, index) => index >0 && index < 3)} 
-          posts={posts.filter((_post, index) => [0, 11, 13].includes(index))} 
+          posts={posts.filter((_post, index) => [0, 15, 13].includes(index))} 
           />
         {/* @ts-expected-error Async Component*/}
         <CTACard />
