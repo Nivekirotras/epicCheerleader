@@ -48,9 +48,10 @@ export default async function Home() {
         
         <HeroSection /> 
         <SectionTitle title={"Featured Articles"} url={"https://www.epiccheerleader.com/how-tos"}/>
-        <PostCard post={posts[0]} />
+        <PostCard post={posts[5]} />
         <PostList 
-          posts={posts.filter((_post, index) => index >0 && index < 3)} 
+          // posts={posts.filter((_post, index) => index >0 && index < 3)} 
+          posts={posts.filter((_post, index) => [0, 12, 14].includes(index))} 
           />
         {/* @ts-expected-error Async Component*/}
         <CTACard />
