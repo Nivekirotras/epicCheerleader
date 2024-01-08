@@ -53,6 +53,8 @@ export default async function Home() {
           // posts={posts.filter((_post, index) => index >0 && index < 3)} 
           posts={posts.filter((_post, index) => [0, 15, 13].includes(index))} 
           />
+        <SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
+        <PostCard reverse post={posts[2]} />
         {/* @ts-expected-error Async Component*/}
         <CTACard />
         <SectionTitle title={"Editor's choice"} url={"https://www.epiccheerleader.com/experiences"}/>
