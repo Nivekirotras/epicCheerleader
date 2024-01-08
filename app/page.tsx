@@ -48,10 +48,10 @@ export default async function Home() {
         
         <HeroSection /> 
         <SectionTitle title={"Featured Articles"} url={"https://www.epiccheerleader.com/how-tos"}/>
-        <PostCard post={posts[5]} />
+        <PostCard post={posts[6]} />
         <PostList 
           // posts={posts.filter((_post, index) => index >0 && index < 3)} 
-          posts={posts.filter((_post, index) => [0, 15, 13].includes(index))} 
+          posts={posts.filter((_post, index) => [0, 16, 14].includes(index))} 
           />
         <SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
         <PostCard reverse post={posts[2]} />
@@ -61,7 +61,7 @@ export default async function Home() {
         <PostCard reverse post={posts[3]} />
         <SectionTitle title={"Favorite Articles"} url={"https://www.epiccheerleader.com/knowledge"}/>
         <PostList 
-          posts={posts.filter((_post, index) => index >6 && index < 13)} 
+          posts={posts.filter((_post, index) => index >7 && index < 14)} 
           />
       </main>
     </PaddingContainer> 
