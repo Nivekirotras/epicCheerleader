@@ -32,6 +32,9 @@ const Navigation = () => {
                                 <Link href="/knowledge">Knowledge</Link>
                             </li>
                             <li>
+                                <Link href="/quotes">Quotes</Link>
+                            </li>
+                            <li>
                                 <Link href="/about">About</Link>
                             </li>
                         </ul>
