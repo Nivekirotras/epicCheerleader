@@ -37,16 +37,16 @@ const PostContentForPost = ({post, isPostPage = false}: PostContentProps) => {
         <div>{getRelativeDate(post.date_created)}</div>   
       </div>
       {/* Title */}
-      <h2 className={`${
+      <h1 className={`${
           isPostPage 
               ? "text-2xl md:text-3xl lg:text-4xl font-bold"
               : "@lg:text-3xl text-2xl @md:text-2xl font-semibold"
           }`}
         >
           {post.title}
-      </h2> 
+      </h1> 
       {/* Description */}
-      <p className='text-base @lg:text-lg leading-snug text-neutral-600 pt-3'>{post.description}</p>
+      <h2 className='text-base @lg:text-lg leading-snug text-neutral-600 pt-3'>{post.description}</h2>
       {/* Read More - make it disappear if it is a Post Page*/}
       {!isPostPage && (
       <div className='flex font-semibold items-center gap-2 pt-3'>

@@ -46,7 +46,7 @@ const PostContent = ({post, isPostPage = false}: PostContentProps) => {
           {post.title}
       </h2> 
       {/* Description */}
-      <p className='text-base @lg:text-lg leading-snug text-neutral-600 pt-3'>{post.description}</p>
+      <h3 className='text-base @lg:text-lg leading-snug text-neutral-600 pt-3'>{post.description}</h3>
       {/* Read More - make it disappear if it is a Post Page*/}
       {!isPostPage && (
       <div className='flex font-semibold items-center gap-2 pt-3'>
