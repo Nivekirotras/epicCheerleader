@@ -3,7 +3,7 @@ import CTACard from "@/components/elements/cta-card";
 import SocialLink from "@/components/elements/social-links";
 import PaddingContainer from "@/components/layout/padding-container";
 import PostBody from "@/components/post/post-body";
-import PostHero from "@/components/post/post-hero";
+import PostHeroForPost from "@/components/post/post-hero";
 import siteConfig from "@/config/site";
 import directus_old from "@/lib/directus_old";
 import { notFound } from "next/navigation";
@@ -147,7 +147,7 @@ const Page = async ({
             />
             {/** Container */}
             <div className="space-y-10">
-            <PostHero post={post} />
+            <PostHeroForPost post={post} />
             {/** Post Body and Social Share */}
             <div className="flex flex-col md:flex-row gap-10">
                 <div className="relative">
