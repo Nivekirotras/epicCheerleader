@@ -1,6 +1,6 @@
 import React from 'react'
 import {Post} from "@/types/collections"
-import PostContentForPost from './post-content';
+import PostContentForPost from './post-content-for-post';
 import Image from "next/image";
 Image 
 

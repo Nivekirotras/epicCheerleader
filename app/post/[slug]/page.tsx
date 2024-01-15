@@ -3,7 +3,7 @@ import CTACard from "@/components/elements/cta-card";
 import SocialLink from "@/components/elements/social-links";
 import PaddingContainer from "@/components/layout/padding-container";
 import PostBody from "@/components/post/post-body";
-import PostHeroForPost from "@/components/post/post-hero";
+import PostHeroForPost from "@/components/post/post-hero-for-post";
 import siteConfig from "@/config/site";
 import directus_old from "@/lib/directus_old";
 import { notFound } from "next/navigation";
