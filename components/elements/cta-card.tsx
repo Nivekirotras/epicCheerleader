@@ -44,7 +44,7 @@ const CTACard = async () => {
         <div className='relative z-20'>
             <div className='text-lg font-medium'>#becomeYourCheerleader</div>   
             <h3 className='text-4xl mt-3 font-semibold'>Sign up to the newsletter</h3>
-            <p className='mt-2 max-w-lg text-lg'>Get a bliss of the best tips to grow your sel-confidence on a daily basis. The latest from research to your inbox</p>
+            <p className='mt-2 max-w-lg text-xl'>Get a bliss of the best tips to grow your sel-confidence on a daily basis. The latest from research to your inbox</p>
             {/* Form */}
             <form 
             key={subscribersCount + "subscriber-count"}

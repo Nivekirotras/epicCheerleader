@@ -16,7 +16,7 @@ const AboutSection = () => {
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Remember, you can't discover your true passion and potential by merely thinking about it. It requires action, an inward journey of self-discovery. It's time to be your own cheerleader, to ignite the spark of self-belief, and to witness how this transforms every facet of your life.</p>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Join us in this movement. With this site we want to increase the awareness on this topic and give you the tools to embrace the power of cheering for yourself. It's not just about feeling good; it's about unleashing your full potential. Here, we don't just dream about a life filled with self-confidence and self-celebration; we create it, one cheer at a time. </p>
               <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Sincerely</p>
-              <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Nivek Iro</p>
+              <p className="mb-6 text-md lg:text-xl text-gray-700 leading-loose">Niv Iro</p>
               <div className="flex flex-wrap gap-y-2">
 
               </div>

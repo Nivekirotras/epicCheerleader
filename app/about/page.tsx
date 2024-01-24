@@ -1,6 +1,7 @@
 import CTACard from "@/components/elements/cta-card";
 import PaddingContainer from "@/components/layout/padding-container";
 import AboutSection from "@/components/sections/about-section";
+import BIOElement from "@/components/elements/bio-element";
 import { cache } from "react";
 
 /*
@@ -57,6 +58,7 @@ const Page = async ({
             {/** Container */}
             <div className="space-y-10">
                 <AboutSection/>
+                <BIOElement/>
                 <CTACard />
             </div>
         </PaddingContainer>
