@@ -1,6 +1,7 @@
 import CTACard from '@/components/elements/cta-card';
 import PaddingContainer from '@/components/layout/padding-container';
 import PostCard from '@/components/post/post-card';
+import PostListCategory from '@/components/post/post-list-category';
 import PostList from '@/components/post/post-lists';
 import HeroSection from '@/components/sections/hero-section';
 import SectionTitle from '@/components/sections/section-titles';
@@ -42,6 +43,8 @@ export default async function Home() {
     notFound();
   }
 
+  // console.log(posts); 
+
   return (
     <PaddingContainer>
       <main className='space-y-10'>
@@ -53,8 +56,11 @@ export default async function Home() {
           // posts={posts.filter((_post, index) => index >0 && index < 3)} 
           posts={posts.filter((_post, index) => [0, 16, 14].includes(index))} 
           />
-        <SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
-        <PostCard reverse post={posts[2]} />
+        {/*<SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
+        <PostCard reverse post={posts[2]} /> */}
+
+        <SectionTitle title={"Confidence Quotes and Affirmations"} url={"https://www.epiccheerleader.com/quotes"}/>
+        <PostListCategory posts={posts} />
         {/* @ts-expected-error Async Component*/}
         <CTACard />
         <SectionTitle title={"Editor's choice"} url={"https://www.epiccheerleader.com/experiences"}/>
