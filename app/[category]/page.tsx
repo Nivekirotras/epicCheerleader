@@ -23,6 +23,7 @@ const getCategoryData = async (categorySlug: string) => {
                 "posts.*",
                 "posts.author.id",
                 "posts.author.first_name",
+                "posts.author.last_name",
                 "posts.category.id",
                 "posts.category.title",
             ],
