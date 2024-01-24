@@ -4,7 +4,9 @@ import SocialLink from "@/components/elements/social-links";
 import PaddingContainer from "@/components/layout/padding-container";
 import PostBody from "@/components/post/post-body";
 import PostHeroForPost from "@/components/post/post-hero-for-post";
+import PostListCategory from '@/components/post/post-list-category';
 import siteConfig from "@/config/site";
+import SectionTitle from '@/components/sections/section-titles';
 import directus_old from "@/lib/directus_old";
 import { notFound } from "next/navigation";
 import { cache } from "react";
@@ -101,6 +103,7 @@ export const generateStaticParams = async () => {
     }
 };
 
+
 const Page = async ({
     params,
 }: {
@@ -137,7 +140,31 @@ const Page = async ({
     if (!post) {
         notFound();
     }
-    
+
+    // Fetch all posts
+    const allPostsResponse = await directus_old.items("post").readByQuery({
+        filter: {
+            status: {
+                _eq: "published",
+            },
+        },
+        fields: [
+            "*",
+            "category.*", // Adjust this line to properly expand the category object
+        ],
+    });
+
+    // Check if the data is an array and expand category object
+    const allPosts = Array.isArray(allPostsResponse?.data) 
+        ? allPostsResponse?.data.map(post => ({
+            ...post,
+            category: post.category && typeof post.category === 'object' 
+                ? { ...post.category }
+                : undefined,
+          }))
+        : [];
+
+    console.log(post.category.title)
     return (
         <PaddingContainer>
             {/** Add JSON-LD to the page */}
@@ -189,6 +216,8 @@ const Page = async ({
             </div>
             {/** CTA CArd */}
             {/* @ts-expected-error Async Component*/}
+            <SectionTitle title={"You might also be interested in:"} url={"https://www.epiccheerleader.com/experiences"}/>
+            <PostListCategory posts={allPosts} categoryFilter={post?.category?.title} />
             <CTACard />
             </div>
         </PaddingContainer>

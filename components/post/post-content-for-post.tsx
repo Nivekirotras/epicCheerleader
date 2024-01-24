@@ -25,8 +25,8 @@ const PostContentForPost = ({post, isPostPage = false}: PostContentProps) => {
             : post.category.title === "Experiences"
             ? "text-indigo-600"
             : post.category.title === "How-tos"
-            ? "text-green-600"
-            : "text-red-600"           
+            ? "text-red-600"
+            : "text-purple-600"          
                 }`}
                 >
                   {post.category.title}

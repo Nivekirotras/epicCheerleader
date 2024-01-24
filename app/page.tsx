@@ -60,7 +60,7 @@ export default async function Home() {
         <PostCard reverse post={posts[2]} /> */}
 
         <SectionTitle title={"Confidence Quotes and Affirmations"} url={"https://www.epiccheerleader.com/quotes"}/>
-        <PostListCategory posts={posts} />
+        <PostListCategory posts={posts} categoryFilter='Quotes and Affirmations'/>
         {/* @ts-expected-error Async Component*/}
         <CTACard />
         <SectionTitle title={"Editor's choice"} url={"https://www.epiccheerleader.com/experiences"}/>
