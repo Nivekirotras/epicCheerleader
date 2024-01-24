@@ -44,6 +44,35 @@ export const generateMetadata = async ({
 };
 */
 
+// Generate Metadata function for the About page
+export const generateMetadata = async () => {
+    return {
+        title: 'About Us',
+        description: 'Learn more about our team and mission',
+        openGraph: {
+            title: 'About Us',
+            description: 'Learn more about our team and mission',
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+            siteName: 'Epic Cheerleader - About Us',
+            images: [
+              {
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/about/opengraph-image.png`,
+                width: 1200,
+                height: 630,
+              },
+            ],
+            locale: 'en_US',
+            type: 'website',
+          },
+          alternates: {
+            canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+            languages: {
+              'en-US': `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+            },
+          }
+    };
+};
+
 
 const Page = async ({
     params,
