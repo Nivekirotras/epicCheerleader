@@ -9,7 +9,7 @@ const BIOElement = async () => {
     <div className='relative px-6 py-10 rounded-md bg-slate-100 flex flex-col-reverse md:flex-row'>
         {/* Content Container */}
         <div className='relative z-20 flex-1'>
-            <h2 className='text-4xl mt-3 font-semibold sm:text-2xl' style={{ lineHeight: '2' }}>Hi there, I&apos;m Niv,</h2>
+            <h2 className='text-4xl mt-3 font-semibold sm:text-xl' style={{ lineHeight: '2' }}>Hi there, I&apos;m Niv,</h2>
             <p className="mt-2 max-w-xl text-xl mb-4 sm:text-lg text-gray-700" style={{ lineHeight: '1.2' }}>
                 If you had told me years ago that I&apos;d be running a site about self-confidence, I&apos;d have laughed... nervously.</p> 
             <p className='mt-2 max-w-xl text-xl mb-4 sm:text-lg text-gray-700' style={{ lineHeight: '1.2' }}>
