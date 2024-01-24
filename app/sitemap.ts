@@ -57,6 +57,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: baseURL,
       lastModified: new Date(),
     },
+    
+    {
+      url: `${baseURL}/about`, // Ensure the URL is a string
+      lastModified: new Date(), // You might want to update this date when the about page content changes
+    },
     /* 
     {
       url: `${baseURL}/en`,
