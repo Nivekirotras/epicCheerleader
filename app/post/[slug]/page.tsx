@@ -210,14 +210,14 @@ const Page = async ({
                         />
                     </div>
                 </div>
-                <div >
+                <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">
                     <PostBody body={post.body}/>
                 </div>
             </div>
-            {/** CTA CArd */}
             {/* @ts-expected-error Async Component*/}
             <SectionTitle title={"You might also be interested in:"} url={"https://www.epiccheerleader.com/experiences"}/>
             <PostListCategory posts={allPosts} categoryFilter={post?.category?.title} />
+            {/** CTA CArd */}
             <CTACard />
             </div>
         </PaddingContainer>
