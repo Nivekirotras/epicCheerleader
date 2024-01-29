@@ -1,4 +1,5 @@
 import CTACard from '@/components/elements/cta-card';
+import TakeTest from '@/components/elements/take-test';
 import PaddingContainer from '@/components/layout/padding-container';
 import PostCard from '@/components/post/post-card';
 import PostListCategory from '@/components/post/post-list-category';
@@ -58,7 +59,7 @@ export default async function Home() {
           />
         {/*<SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
         <PostCard reverse post={posts[2]} /> */}
-
+        <TakeTest />
         <SectionTitle title={"Confidence Quotes and Affirmations"} url={"https://www.epiccheerleader.com/quotes"}/>
         <PostListCategory posts={posts} categoryFilter='Quotes and Affirmations'/>
         {/* @ts-expected-error Async Component*/}
