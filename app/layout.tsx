@@ -58,6 +58,7 @@ export default function RootLayout({
 
             gtag('config', 'G-BQX1LQ6LJN');`}
           </Script>
+          <meta name="p:domain_verify" content="cc30a0584cc8194d713685c3a5301e06"/>
       <body className={inter.className}>
         <Navigation />
         {/** the calculations make sure that the footer does not overlap (original is -300px) */}
