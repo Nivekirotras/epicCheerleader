@@ -10,6 +10,7 @@ import SectionTitle from '@/components/sections/section-titles';
 import directus_old from "@/lib/directus_old";
 import { notFound } from "next/navigation";
 import { cache } from "react";
+import InsightfullyBanner from "@/components/elements/insightfully-banner";
 
 const getPostData = async (postSlug: string) => {
     try {
@@ -213,6 +214,7 @@ const Page = async ({
                 <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">
                     <PostBody body={post.body}/>
                 </div>
+                <InsightfullyBanner/>
             </div>
             {/* @ts-expected-error Async Component*/}
             <SectionTitle title={"You might also be interested in:"} url={"https://www.epiccheerleader.com/experiences"}/>
