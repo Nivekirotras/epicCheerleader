@@ -177,6 +177,12 @@ const Page = async ({
             <div className="space-y-10">
             <PostHeroForPost post={post} />
             {/** Post Body and Social Share */}
+
+            {/** InsightfullyBanner only for mobile screens */}
+            <div className="md:hidden">
+                <InsightfullyBanner />
+            </div>
+
             <div className="flex flex-col md:flex-row gap-10">
                 <div className="relative">
                     <div className="sticky flex items-center md:flex-col gap-5 top-24">
@@ -214,7 +220,10 @@ const Page = async ({
                 <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">
                     <PostBody body={post.body}/>
                 </div>
-                <InsightfullyBanner/>
+                {/** InsightfullyBanner only for larger screens */}
+                <div className="hidden md:block">
+                    <InsightfullyBanner />
+                </div>
             </div>
             {/* @ts-expected-error Async Component*/}
             <SectionTitle title={"You might also be interested in:"} url={"https://www.epiccheerleader.com/experiences"}/>
