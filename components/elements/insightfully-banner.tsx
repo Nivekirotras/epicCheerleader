@@ -37,7 +37,7 @@ const InsightfullyBanner = async () => {
           {/* Image */}
           <Image
               fill 
-              alt="Cheerleader personality test"
+              alt="New journaling app with voice journaling"
               className="object-cover object-center"
               src="https://images.unsplash.com/photo-1609660775301-d9c37427d6ad?q=80&w=2730&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
           
