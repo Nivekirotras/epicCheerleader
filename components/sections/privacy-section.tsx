@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from "next/image"
 
-const AboutSection = () => {
+const PrivacySection = () => {
     return (
       <div className='flex gap-10 md:gap-8'>
   
@@ -202,4 +202,4 @@ const AboutSection = () => {
   }
   
 
-export default AboutSection;
+export default PrivacySection;

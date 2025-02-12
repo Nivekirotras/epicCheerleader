@@ -3,6 +3,7 @@ import PaddingContainer from "@/components/layout/padding-container";
 import AboutSection from "@/components/sections/about-section";
 import BIOElement from "@/components/elements/bio-element";
 import { cache } from "react";
+import PrivacySection from "@/components/sections/privacy-section";
 
 /*
 // Generate Metadata function
@@ -86,7 +87,7 @@ const Page = async ({
         <PaddingContainer>
             {/** Container */}
             <div className="space-y-10">
-                <AboutSection/>
+                <PrivacySection/>
             </div>
         </PaddingContainer>
     );
