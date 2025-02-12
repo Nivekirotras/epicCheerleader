@@ -68,7 +68,7 @@ export default async function Home() {
         <PostCard reverse post={posts[3]} />
         <SectionTitle title={"Favorite Articles"} url={"https://www.epiccheerleader.com/knowledge"}/>
         <PostList 
-          posts={posts.filter((_post, index) => index >7 && index < 14)} 
+          posts={posts.filter((_post, index) => index >9 && index < 16)} 
           />
       </main>
     </PaddingContainer> 
