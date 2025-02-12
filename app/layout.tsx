@@ -1,14 +1,15 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Link from 'next/link'
-import Navigation from '@/components/navigation/navigation'
-import Footer from '@/components/navigation/footer'
-import siteConfig from '@/config/site'
-import Script from 'next/script'
-import { Analytics } from '@vercel/analytics/react'
+// layout.tsx
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Link from 'next/link';
+import Navigation from '@/components/navigation/navigation';
+import Footer from '@/components/navigation/footer';
+import siteConfig from '@/config/site';
+import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +38,6 @@ export const metadata: Metadata = {
       'en-US': `${process.env.NEXT_PUBLIC_SITE_URL}`,
     },
   },
-  /* Verification by google search console */
   verification: {
     google: "QeWyBhtuwYXZhhQQ5BdQmp0_fLOQENvm-hF9Is_IUGE"
   },
@@ -46,26 +46,38 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-BQX1LQ6LJN"></Script>
-          <Script id="google-analytics">
-            {`window.dataLayer = window.dataLayer || [];
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-BQX1LQ6LJN"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-BQX1LQ6LJN');`}
-          </Script>
-          <meta name="p:domain_verify" content="cc30a0584cc8194d713685c3a5301e06"/>
+        </Script>
+
+        {/* Adsense Script - Loads on ALL pages */}
+        <Script
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9008787039545928"
+          crossOrigin="anonymous"
+        />
+
+        <meta name="p:domain_verify" content="cc30a0584cc8194d713685c3a5301e06" />
+      </head>
       <body className={inter.className}>
         <Navigation />
-        {/** the calculations make sure that the footer does not overlap (original is -300px) */}
-        <div className='pt-10 min-h-[calc(100vh-100px)]'>{children}</div>
+        <div className="pt-10 min-h-[calc(100vh-100px)]">{children}</div>
         <Footer />
         <Analytics />
       </body>
     </html>
   );
-};
+}
