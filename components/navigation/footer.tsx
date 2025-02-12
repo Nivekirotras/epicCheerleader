@@ -48,6 +48,9 @@ const Footer = () => {
                     <div className="text-sm text-neutral-400">
                         All rights reserved | Copyright {new Date().getFullYear()}
                     </div>
+                    <div className="text-sm text-neutral-400">
+                        <a href="/privacy" className="hover:underline">Privacy</a>
+                    </div>
                     <div className="text-sm">Built in the 🏔️ with lots of ☕</div>
                 </div>
             </PaddingContainer>
