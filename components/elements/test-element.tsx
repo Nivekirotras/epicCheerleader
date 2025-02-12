@@ -3,7 +3,7 @@ import Image from 'next/image'
 import directus_old from '@/lib/directus_old';
 import { revalidateTag } from 'next/cache';
 
-const testElement = async () => {
+const TestElement = async () => {
   const formAction = async (formData: FormData) => {
     "use server";
     try {
@@ -57,4 +57,4 @@ const testElement = async () => {
   )
 }
 
-export default testElement;
+export default TestElement;

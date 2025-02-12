@@ -11,6 +11,7 @@ import directus_old from "@/lib/directus_old";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import InsightfullyBanner from "@/components/elements/insightfully-banner";
+import TestElement from "@/components/elements/test-element";
 
 const getPostData = async (postSlug: string) => {
     try {
@@ -224,6 +225,11 @@ const Page = async ({
                 <div className="hidden md:block">
                     <InsightfullyBanner />
                 </div>
+                </div>
+                
+                        {/** InsightfullyBanner only for mobile screens */}
+            <div>
+                <TestElement/>
             </div>
             {/* @ts-expected-error Async Component*/}
             <SectionTitle title={"You might also be interested in:"} url={"https://www.epiccheerleader.com/experiences"}/>
