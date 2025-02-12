@@ -51,14 +51,14 @@ export default async function Home() {
       <main className='space-y-10'>
         
         <HeroSection /> 
-        <SectionTitle title={"Featured Articles"} url={"https://www.epiccheerleader.com/how-tos"}/>
-        <PostCard post={posts[6]} />
+        <SectionTitle title={"Featured Articles"} url={"https://www.epiccheerleader.com/quotes"}/>
+        <PostCard post={posts[29]} />
         <PostList 
           // posts={posts.filter((_post, index) => index >0 && index < 3)} 
-          posts={posts.filter((_post, index) => [0, 16, 14].includes(index))} 
+          posts={posts.filter((_post, index) => [4, 17, 7].includes(index))} 
           />
-        {/*<SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
-        <PostCard reverse post={posts[2]} /> */}
+        <SectionTitle title={"Latest Article"} url={"https://www.epiccheerleader.com/knowledge"}/>
+        <PostCard reverse post={posts[27]} />
         <TakeTest />
         <SectionTitle title={"Confidence Quotes and Affirmations"} url={"https://www.epiccheerleader.com/quotes"}/>
         <PostListCategory posts={posts} categoryFilter='Quotes and Affirmations'/>
@@ -68,7 +68,7 @@ export default async function Home() {
         <PostCard reverse post={posts[3]} />
         <SectionTitle title={"Favorite Articles"} url={"https://www.epiccheerleader.com/knowledge"}/>
         <PostList 
-          posts={posts.filter((_post, index) => index >9 && index < 16)} 
+          posts={posts.filter((_post, index) => index >8 && index < 16)} 
           />
       </main>
     </PaddingContainer> 
