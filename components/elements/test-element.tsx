@@ -39,7 +39,7 @@ const TestElement = async () => {
               fill 
               alt="New journaling app with voice journaling"
               className="object-cover object-center"
-              src="https://images.unsplash.com/photo-1636955779321-819753cd1741?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+              src="https://images.unsplash.com/photo-1550592704-6c76defa9985?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
           
           {/* Content Container */}
           <div className='relative z-20'>
