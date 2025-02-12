@@ -1,4 +1,4 @@
-// layout.tsx
+// app/layout.tsx
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -51,26 +51,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics Script */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-BQX1LQ6LJN"
+        {/* Google AdSense Verification Meta Tag */}
+        <meta name="google-adsense-account" content="ca-pub-9008787039545928" />
+        {/* Pinterest Domain Verification (if needed) */}
+        <meta name="p:domain_verify" content="cc30a0584cc8194d713685c3a5301e06" />
+
+        {/* Google Analytics */}
+        <Script 
+          strategy="afterInteractive" 
+          src="https://www.googletagmanager.com/gtag/js?id=G-BQX1LQ6LJN" 
         />
         <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
+          {`
+            window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-BQX1LQ6LJN');`}
+            gtag('config', 'G-BQX1LQ6LJN');
+          `}
         </Script>
-
-        {/* Adsense Script - Loads on ALL pages */}
-        <Script
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9008787039545928"
-          crossOrigin="anonymous"
-        />
-
-        <meta name="p:domain_verify" content="cc30a0584cc8194d713685c3a5301e06" />
       </head>
       <body className={inter.className}>
         <Navigation />
