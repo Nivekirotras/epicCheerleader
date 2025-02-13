@@ -4,6 +4,7 @@ import AboutSection from "@/components/sections/about-section";
 import BIOElement from "@/components/elements/bio-element";
 import { cache } from "react";
 import GoogleAdSquareReactive from '@/components/elements/google-ad-square-reactive';
+import GoogleAdInArticle from "@/components/elements/google-ad-in-article";
 
 
 /*
@@ -91,6 +92,7 @@ const Page = async ({
                 <AboutSection/>
                 <BIOElement />
                 <GoogleAdSquareReactive />
+                <GoogleAdInArticle />
                 <CTACard />
             </div>
         </PaddingContainer>
