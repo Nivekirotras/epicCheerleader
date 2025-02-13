@@ -1,12 +1,12 @@
 import React from "react";
 import parse, { Element } from "html-react-parser";
 import Image from "next/image";
-import GoogleAdSquareReactive from "@/components/elements/google-ad-in-article";
+import GoogleAdInArticle from "@/components/elements/google-ad-in-article";
 
 const PostBody = ({ body }: { body: string }) => {
   const options = {
     replace: (domNode: any) => {
-      // Replace the [google-ad] placeholder with the Google ad component.
+      // Replace every occurrence of [google-ad] in a text node
       if (
         domNode.type === "text" &&
         typeof domNode.data === "string" &&
@@ -18,13 +18,14 @@ const PostBody = ({ body }: { body: string }) => {
             {parts.map((part: string, index: number) => (
               <React.Fragment key={index}>
                 {part}
-                {index !== parts.length - 1 && <GoogleAdSquareReactive />}
+                {index !== parts.length - 1 && <GoogleAdInArticle />}
               </React.Fragment>
             ))}
           </span>
         );
       }
 
+      // Replace <img> elements with Next.js Image component
       if (domNode instanceof Element && domNode.attribs) {
         if (domNode.name === "img") {
           const { src, alt } = domNode.attribs;
@@ -42,11 +43,8 @@ const PostBody = ({ body }: { body: string }) => {
     },
   };
 
-  const getParsedHTML = (body: string) => {
-    return parse(body, options);
-  };
-
-  return <div className="rich-text">{getParsedHTML(body)}</div>;
+  const parsedHTML = parse(body, options);
+  return <div className="rich-text">{parsedHTML}</div>;
 };
 
 export default PostBody;
