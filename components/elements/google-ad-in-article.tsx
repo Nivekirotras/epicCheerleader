@@ -1,7 +1,8 @@
+// components/GoogleAdSquareReactive.tsx
 import React from 'react';
 import Script from 'next/script';
 
-// Extend the Window interface to include adsbygoogle (helps TypeScript)
+// Extend the Window interface to include adsbygoogle
 declare global {
   interface Window {
     adsbygoogle: any;
@@ -11,13 +12,12 @@ declare global {
 const GoogleAdInArticle = () => {
   return (
     <>
-      {/* Load the Google AdSense script */}
+      {/* Load AdSense script (if not already loaded globally) */}
       <Script
         strategy="afterInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9008787039545928"
         crossOrigin="anonymous"
       />
-      
       {/* Ad container */}
       <ins
         className="adsbygoogle"
@@ -27,11 +27,10 @@ const GoogleAdInArticle = () => {
         data-ad-client="ca-pub-9008787039545928"
         data-ad-slot="4318112437"
       />
-      
-      {/* Push the ad (initialize the ad slot) */}
+      {/* Initialize the ad */}
       <Script id="adsbygoogle-push" strategy="afterInteractive">
         {`
-          (adsbygoogle = window.adsbygoogle || []).push({});
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
         `}
       </Script>
     </>
