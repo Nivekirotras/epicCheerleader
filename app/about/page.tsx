@@ -91,8 +91,6 @@ const Page = async ({
             <div className="space-y-10">
                 <AboutSection/>
                 <BIOElement />
-                <GoogleAdSquareReactive />
-                <GoogleAdInArticle />
                 <CTACard />
             </div>
         </PaddingContainer>
