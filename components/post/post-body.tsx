@@ -1,7 +1,7 @@
 import React from "react";
 import parse, { Element } from "html-react-parser";
 import Image from "next/image";
-import GoogleAdSquareReactive from "@/components/elements/google-ad-square-reactive";
+import GoogleAdInArticle from "@/components/elements/google-ad-in-article";
 
 const PostBody = ({ body }: { body: string }) => {
   const options = {
@@ -18,7 +18,7 @@ const PostBody = ({ body }: { body: string }) => {
             {parts.map((part: string, index: number) => (
               <React.Fragment key={index}>
                 {part}
-                {index !== parts.length - 1 && <GoogleAdSquareReactive />}
+                {index !== parts.length - 1 && <GoogleAdInArticle />}
               </React.Fragment>
             ))}
           </span>
