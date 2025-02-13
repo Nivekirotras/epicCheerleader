@@ -1,27 +1,51 @@
 import React from "react";
 import parse, { Element } from "html-react-parser";
 import Image from "next/image";
-import GoogleAdSquareReactive from "@/components/elements/google-ad-in-article";
+
+// Dummy ad component for testing
+const DummyAd = () => {
+  return (
+    <div
+      style={{
+        border: "2px dashed red",
+        padding: "20px",
+        textAlign: "center",
+        margin: "20px 0",
+      }}
+    >
+      <img
+        src="https://picsum.photos/200/150"
+        alt="Dummy Ad"
+        style={{ maxWidth: "100%" }}
+      />
+      <p>Dummy Ad Component</p>
+    </div>
+  );
+};
 
 const PostBody = ({ body }: { body: string }) => {
   const options = {
     replace: (domNode: any) => {
-      // Replace the [google-ad] placeholder with the Google ad component
+      // Replace the [google-ad] placeholder with the DummyAd component for testing.
       if (
         domNode.type === "text" &&
         typeof domNode.data === "string" &&
         domNode.data.includes("[google-ad]")
       ) {
         const parts = domNode.data.split("[google-ad]");
-        return parts.map((part: string, index: number) => (
-          <React.Fragment key={index}>
-            {part}
-            {index !== parts.length - 1 && <GoogleAdSquareReactive />}
-          </React.Fragment>
-        ));
+        return (
+          <span>
+            {parts.map((part: string, index: number) => (
+              <React.Fragment key={index}>
+                {part}
+                {index !== parts.length - 1 && <DummyAd />}
+              </React.Fragment>
+            ))}
+          </span>
+        );
       }
 
-      // Replace <img> elements with Next.js Image component
+      // Replace <img> elements with Next.js Image component.
       if (domNode instanceof Element && domNode.attribs) {
         if (domNode.name === "img") {
           const { src, alt } = domNode.attribs;
