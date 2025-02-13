@@ -1,6 +1,7 @@
+// components/GoogleAdSquareReactive.tsx
 import React, { useEffect } from 'react';
 
-// Declare the adsbygoogle property on the Window interface
+// Extend the Window interface for TypeScript
 declare global {
   interface Window {
     adsbygoogle: any;
@@ -10,7 +11,7 @@ declare global {
 const GoogleAdSquareReactive = () => {
   useEffect(() => {
     try {
-      // Cast window.adsbygoogle to any to avoid TypeScript errors
+      // This will initialize the ad container when the component mounts
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (error) {
       console.error('Google AdSense error:', error);
@@ -20,11 +21,11 @@ const GoogleAdSquareReactive = () => {
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: 'block' }}
+      style={{ display: 'block', textAlign: 'center', minHeight: '250px' }}
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
       data-ad-client="ca-pub-9008787039545928"
-      data-ad-slot="2610279097"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
+      data-ad-slot="4318112437"
     />
   );
 };
