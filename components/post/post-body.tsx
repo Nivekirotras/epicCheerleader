@@ -1,9 +1,27 @@
+import React from "react";
 import parse, { Element } from "html-react-parser";
 import Image from "next/image";
+import GoogleAdSquareReactive from "@/components/elements/google-ad-in-article";
 
 const PostBody = ({ body }: { body: string }) => {
   const options = {
     replace: (domNode: any) => {
+      // Replace the [google-ad] placeholder with the Google ad component
+      if (
+        domNode.type === "text" &&
+        typeof domNode.data === "string" &&
+        domNode.data.includes("[google-ad]")
+      ) {
+        const parts = domNode.data.split("[google-ad]");
+        return parts.map((part: string, index: number) => (
+          <React.Fragment key={index}>
+            {part}
+            {index !== parts.length - 1 && <GoogleAdSquareReactive />}
+          </React.Fragment>
+        ));
+      }
+
+      // Replace <img> elements with Next.js Image component
       if (domNode instanceof Element && domNode.attribs) {
         if (domNode.name === "img") {
           const { src, alt } = domNode.attribs;
