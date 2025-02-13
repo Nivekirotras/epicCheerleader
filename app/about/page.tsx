@@ -90,7 +90,8 @@ const Page = async ({
             {/** Container */}
             <div className="space-y-10">
                 <AboutSection/>
-                <BIOElement />
+                 <BIOElement />
+                <GoogleAdInArticle/>
                 <CTACard />
             </div>
         </PaddingContainer>
