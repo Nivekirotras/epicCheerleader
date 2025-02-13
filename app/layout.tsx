@@ -69,6 +69,11 @@ export default function RootLayout({
             gtag('config', 'G-BQX1LQ6LJN');
           `}
         </Script>
+        <Script 
+          strategy="afterInteractive" 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9008787039545928"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={inter.className}>
         <Navigation />
