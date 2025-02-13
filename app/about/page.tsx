@@ -3,6 +3,8 @@ import PaddingContainer from "@/components/layout/padding-container";
 import AboutSection from "@/components/sections/about-section";
 import BIOElement from "@/components/elements/bio-element";
 import { cache } from "react";
+import GoogleAdSquareReactive from '@/components/elements/google-ad-square-reactive';
+
 
 /*
 // Generate Metadata function
@@ -87,7 +89,8 @@ const Page = async ({
             {/** Container */}
             <div className="space-y-10">
                 <AboutSection/>
-                <BIOElement/>
+                <BIOElement />
+                <GoogleAdSquareReactive />
                 <CTACard />
             </div>
         </PaddingContainer>
