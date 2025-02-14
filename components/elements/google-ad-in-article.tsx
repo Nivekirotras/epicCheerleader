@@ -1,4 +1,5 @@
-// components/google-ad-in-article.tsx
+"use client";
+
 import React, { useEffect } from 'react';
 
 declare global {
