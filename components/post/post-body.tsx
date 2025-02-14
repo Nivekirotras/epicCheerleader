@@ -2,11 +2,12 @@ import React from "react";
 import parse, { Element } from "html-react-parser";
 import Image from "next/image";
 import GoogleAdInArticle from "@/components/elements/google-ad-in-article";
+import { adSlots } from "@/lib/ad-slots"; // This file can be a .ts file
 
 const PostBody = ({ body }: { body: string }) => {
   const options = {
     replace: (domNode: any) => {
-      // Replace all occurrences of [google-ad] in a text node
+      // Check for the [google-ad] placeholder in text nodes
       if (
         domNode.type === "text" &&
         typeof domNode.data === "string" &&
@@ -15,16 +16,24 @@ const PostBody = ({ body }: { body: string }) => {
         const parts = domNode.data.split("[google-ad]");
         return (
           <span>
-            {parts.map((part: string, index: number) => (
-              <React.Fragment key={index}>
-                {part}
-                {index !== parts.length - 1 && <GoogleAdInArticle />}
-              </React.Fragment>
-            ))}
+            {parts.map((part: string, index: number) => {
+              // Randomly select an ad slot ID from the adSlots array
+              const randomSlot =
+                adSlots[Math.floor(Math.random() * adSlots.length)];
+              return (
+                <React.Fragment key={index}>
+                  {part}
+                  {index !== parts.length - 1 && (
+                    <GoogleAdInArticle adSlot={randomSlot} />
+                  )}
+                </React.Fragment>
+              );
+            })}
           </span>
         );
       }
-      // Replace <img> elements with Next.js Image component
+
+      // Replace <img> elements with Next.js Image component.
       if (domNode instanceof Element && domNode.attribs) {
         if (domNode.name === "img") {
           const { src, alt } = domNode.attribs;
